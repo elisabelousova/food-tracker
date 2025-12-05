@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер питания</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Proxima Nova (CDN аналог) -->
-  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <!-- Proxima Nova (замена через CDN) -->
+    <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+
+    <!-- Galindo (для смайликов) -->
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="date-title">21 марта, пятница</div>
-    <img class="avatar" src="https://lh3.googleusercontent.com/rd-d/ALs6j_GUprIPBkZn7lGtB8xuD_TVjjlVU4_djaSgm4SsATPYZZ-6_o5zDXp5sfijGHOtBw-PbKl01QFsidZZY_xx0fbsW_mr_MJUaKP1UJE1BwZj5b0Jbjv2-oWiE_LkSz33WfIKGFdXtsPi4G9cB-XEHsa_hbmyShAXFrbd8et1MWRtPYOOZtzxvXZJIQoQWRneVy9IPzOi-1Z68rWC-RLBK77jkwGms-QPU6OuWzsobQcVsbHSzwqvb1bFVNw1Rkn_Ze8iVP9TOdsnWxU4OlJrMYUhLufH_yXy4B6EW7xPEe-43bsSk-UcqfZ_7AJkddZQZT0yO2Q-p8WUiEi7aq6UWvQOPWMclNwX1ecGIhEiHNG8uGOeQZL5dLmS2oJRGIVDzmPqhQnsIPf-p6abfo_H6ld2y5ucpsFd3TTHB-peUkmnXOtAlsmJoZw7yswMpwx3Uth9yjXF5ObU6YqVPh_CpW4EERVfWvUXEsxzD1pXF0mIyeJxPclQ0HjXwutcMQMEZOQe_ueeP1bF88ZFMWq2aO24dL1mj1hJiEbMeMHCfUT8mvlKYq-FlbghZuklP0qbO6zFSrqgNzm47WG-zE6nfqNE5elOP8sMuJfe9IfEbFpiiCW4l0GnyFqiQRSCX6QoTOrb7oAaZm_uHQGjeKo-kixKgGqWcZdXZZD2lAP8qqsMqra1EhYuz2i3VrdSeHdPlgh_Da-d3gUdkTgXvzxPysYI7kKboeBd5jGVw_e5ZSlvNChBsFscm5mG2ZpRIW8ApNYvRh13tt6ZpUwbQatlwFaA1kn9hKu68KvUxP0T94ljYMLS5ZUM9EbArtD7ouwajBzCbN3T591aNj0i0XJlGoNuXgcv1DrirfTdx1syxDBoHh1xz2Fedw8OJgB8hxbxo71JEhGln8u3V4JLOP_JpgMyVA6Z3parNS7qYU0HGroHofg1T58oIAL7O5fl5J0hVO6Nt7X_Uzcc8977h0BVlHWHdgImRTj90E0qjj3r9-2LoeVjYxTFHuQBXEWfKeiDn0HCSd4V4g=w2240-h1506"
-         alt="avatar">
-  </header>
+<header class="header">
+    <img src="assets/avatar.jpg" alt="Профиль" class="avatar">
+</header>
 
-  <main class="container">
+<main class="main-content">
 
-    <div class="goal-number">
-      <span class="underlined">0%</span> вашей нормы
+    <!-- Дата -->
+    <h1 class="date">21 марта, пятница</h1>
+
+    <!-- Процент нормы -->
+    <div class="norma-box">
+        <span class="percent underline">0%</span>
+        <span> вашей нормы</span>
     </div>
 
-    <div class="nutrients">
-      <span class="nutrient">🍉</span>
-      <span class="nutrient">🍋</span>
-      <span class="nutrient">🍎</span>
+    <!-- Блоки приёмов пищи -->
+<section class="meals">
+
+    <div class="meal">
+        <div class="meal-title">Завтрак</div>
+        <div class="meal-emojis">🍉 🍋 🍎</div>
     </div>
 
-    <div class="meals-list">
-      <div class="meal-item">Завтрак</div>
-      <div class="meal-item">Обед</div>
-      <div class="meal-item">Ужин</div>
-      <div class="meal-item">Еще</div>
+    <div class="meal">
+        <div class="meal-title">Обед</div>
+        <div class="meal-emojis">🍉 🍋 🍎</div>
     </div>
 
-    <button class="add-meal-btn">Добавить прием пищи</button>
+    <div class="meal">
+        <div class="meal-title">Ужин</div>
+        <div class="meal-emojis">🍉 🍋 🍎</div>
+    </div>
 
-  </main>
+    <div class="meal">
+        <div class="meal-title">+ Ещё</div>
+        <div class="meal-emojis">🍉 🍋 🍎</div>
+    </div>
+
+</section>
+
+    <!-- Кнопка добавления -->
+    <button class="add-btn">Добавить приём пищи</button>
+
+</main>
 
 </body>
 </html>
