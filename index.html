@@ -4,44 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="screen">
-    <header class="header">
-      <div class="time">9:41</div>
-      <img class="avatar" src="https://i.imgur.com/EvF4jvK.png" alt="avatar" />
-    </header>
 
-    <h2 class="date">21 марта, пятница</h2>
+  <header class="header">
+    <div class="date">21 марта, пятница</div>
+    <img src="avatar.png" alt="avatar" class="avatar">
+  </header>
 
-    <div class="norm">
-      <span class="percent">0%</span> вашей нормы
+  <main class="main">
+
+    <div class="norm-block">
+      <span class="underline">0%</span> вашей нормы
     </div>
 
-    <div class="meals">
-      <div class="meal-row">
-        <button class="meal-btn">Завтрак</button>
-        <div class="icons">🍉 🍋 🍎</div>
+    <section class="meals">
+      <div class="meal-card">
+        <div class="meal-icon">🍉</div>
+        <div class="meal-title">Завтрак</div>
       </div>
 
-      <div class="meal-row">
-        <button class="meal-btn">Обед</button>
-        <div class="icons">🍉 🍋 🍎</div>
+      <div class="meal-card">
+        <div class="meal-icon">🍋</div>
+        <div class="meal-title">Обед</div>
       </div>
 
-      <div class="meal-row">
-        <button class="meal-btn">Ужин</button>
-        <div class="icons">🍉 🍋 🍎</div>
+      <div class="meal-card">
+        <div class="meal-icon">🍎</div>
+        <div class="meal-title">Ужин</div>
       </div>
 
-      <div class="meal-row">
-        <button class="meal-btn">+ Ещё</button>
-        <div class="icons">🍉 🍋 🍎</div>
+      <div class="meal-card">
+        <div class="meal-icon">🍏</div>
+        <div class="meal-title">Ещё</div>
       </div>
-    </div>
+    </section>
 
-    <button class="add-btn">Добавить прием пищи</button>
-  </div>
+    <button class="add-meal-btn">Добавить прием пищи</button>
+
+  </main>
+
 </body>
 </html>
