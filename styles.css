@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+
+:root {
+  --orange: #F2763D;
+  --black: #000000;
+  --bg: #FFFFFF;
+  --gray: #F5F5F5;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange);
+  margin: 0;
+}
+
+.main {
+  padding: 24px;
+}
+
+.norm-block {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.norm-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.norm-text {
+  font-size: 16px;
+  display: block;
+  margin-top: 4px;
+}
+
+.meals {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meal-card {
+  display: inline-flex;
+  height: 44px;
+  padding: 10px 11px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  align-items: center;
+  gap: 8px;
+}
+
+.meal-icon {
+  font-family: "Galindo";
+  font-size: 25px;
+}
+
+.meal-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.add-meal {
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: white;
+  cursor: pointer;
+}

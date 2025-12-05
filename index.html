@@ -5,48 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Tracker</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
   <header class="header">
-    <div class="date">21 марта, пятница</div>
-    <img src="avatar.png" alt="avatar" class="avatar">
+    <h1 class="date">21 марта, пятница</h1>
+    <img src="avatar.png" alt="avatar" class="avatar" />
   </header>
 
   <main class="main">
-
     <div class="norm-block">
-      <span class="underline">0%</span> вашей нормы
+      <span class="norm-value underline">0%</span>
+      <span class="norm-text">вашей нормы</span>
     </div>
 
-    <section class="meals">
+    <div class="meals">
       <div class="meal-card">
-        <div class="meal-icon">🍉</div>
-        <div class="meal-title">Завтрак</div>
+        <span class="meal-icon">🍉</span>
+        <span class="meal-title">Завтрак</span>
       </div>
 
       <div class="meal-card">
-        <div class="meal-icon">🍋</div>
-        <div class="meal-title">Обед</div>
+        <span class="meal-icon">🍋</span>
+        <span class="meal-title">Обед</span>
       </div>
 
       <div class="meal-card">
-        <div class="meal-icon">🍎</div>
-        <div class="meal-title">Ужин</div>
+        <span class="meal-icon">🍎</span>
+        <span class="meal-title">Ужин</span>
       </div>
 
       <div class="meal-card">
-        <div class="meal-icon">🍏</div>
-        <div class="meal-title">Ещё</div>
+        <span class="meal-icon">🍎</span>
+        <span class="meal-title">Еще</span>
       </div>
-    </section>
+    </div>
 
-    <button class="add-meal-btn">Добавить прием пищи</button>
-
+    <button class="add-meal">Добавить прием пищи</button>
   </main>
-
 </body>
 </html>
