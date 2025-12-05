@@ -1,106 +1,119 @@
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+:root {
+    --orange: #F2763D;
+    --gray-bg: #F5F5F5;
+    --text-dark: #000;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+
+    --font-main: 'Proxima Nova', sans-serif;
+    --font-emoji: 'Galindo', sans-serif;
 }
 
 body {
-  font-family: "Proxima Nova", sans-serif;
-  background: #FFFFFF;
-  padding: 20px;
-  max-width: 375px;
-  margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: var(--font-main);
 }
 
-/* HEADER */
+/* Header */
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
 }
 
 .avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    object-fit: cover;
 }
 
-.date-title {
-  text-align: center;
-  width: 100%;
-  color: #000;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  margin-top: 10px;
+/* Main */
+
+.main-content {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* PROGRESS */
+/* Date */
 
-.goal-number {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 15px 0;
+.date {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-top: 10px;
 }
 
-.underlined {
-  color: #000;
-  text-decoration: underline;
+/* Norma box */
+
+.norma-box {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 10px 20px;
+    width: max-content;
+    margin: 20px auto;
+    font-size: 16px;
+    display: flex;
+    gap: 4px;
 }
 
-/* NUTRIENTS */
-
-.nutrients {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+.underline {
+    text-decoration: underline;
 }
 
-.nutrient {
-  font-family: "Galindo", cursive;
-  font-size: 25px;
-  line-height: 20px;
+/* Meals Section */
+
+.meals {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-/* MEAL ITEMS */
-
-.meals-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.meal {
+    display: flex;
+    justify-content: space-between; /* ВАЖНО: текст слева, смайлы справа */
+    align-items: center;
 }
 
-.meal-item {
-  font-size: 16px;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
-  font-weight: 400;
+.meal-title {
+    background: var(--gray-bg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    min-width: 120px;
+    text-align: center;
 }
 
-/* BUTTON */
+.meal-emojis {
+    font-family: var(--font-emoji);
+    font-size: 25px;
+    line-height: 20px;
+}
 
-.add-meal-btn {
-  width: 303px;
-  display: flex;
-  justify-content: center;
-  padding: 16px 0;
-  margin: 25px auto;
-  border-radius: 12px;
-  border: none;
-  background: #F2763D;
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
+
+/* Add button */
+
+.add-btn {
+    width: 100%;
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 16px 0;
+    margin: 40px 0;
+    border-radius: var(--radius);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 400;
 }
