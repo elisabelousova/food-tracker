@@ -1,90 +1,93 @@
 :root {
-  --accent: #F2763D;
-  --text: #000;
-  --bg: #fff;
-  --btn-bg: #fff;
-  --btn-border: #ddd;
+  --primary-orange: #F2763D;
+  --text-black: #000;
+  --bg-light: #F5F5F5;
+  --radius: 12px;
 }
 
 body {
   margin: 0;
-  background: var(--bg);
-  font-family: 'Proxima Nova', sans-serif;
-}
-
-.screen {
-  width: 375px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 0;
+  background: #FFFFFF;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.time {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  padding: 24px;
 }
 
 .date {
-  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-orange);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main {
+  padding: 0 24px;
+}
+
+.norm-block {
+  margin-top: 20px;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  margin-top: 20px;
+  color: var(--text-black);
 }
 
-.norm {
-  display: inline-block;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  padding: 8px 14px;
-  border-radius: 10px;
-}
-
-.percent {
-  font-weight: bold;
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-orange);
 }
 
 .meals {
-  margin-top: 30px;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.meal-row {
-  display: flex;
-  justify-content: space-between;
+.meal-card {
+  display: inline-flex;
+  height: 44px;
+  padding: 10px 11px;
+  justify-content: flex-start;
   align-items: center;
-  margin-bottom: 25px;
+  gap: 10px;
+
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.meal-btn {
-  background: var(--btn-bg);
-  border: 1px solid var(--btn-border);
-  border-radius: 12px;
-  padding: 10px 16px;
-  font-size: 16px;
-}
-
-.icons {
+.meal-icon {
+  font-family: "Galindo", cursive;
   font-size: 25px;
 }
 
-.add-btn {
+.meal-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-black);
+}
+
+.add-meal-btn {
+  display: flex;
   width: 100%;
-  padding: 18px 0;
-  margin-top: 50px;
-  font-size: 18px;
-  background: var(--accent);
+  padding: 16px 0;
+  justify-content: center;
+  border-radius: var(--radius);
+  background: var(--primary-orange);
   color: white;
+  font-size: 16px;
   border: none;
-  border-radius: 14px;
+  margin-top: 32px;
 }
