@@ -1,0 +1,90 @@
+:root {
+  --accent: #F2763D;
+  --text: #000;
+  --bg: #fff;
+  --btn-bg: #fff;
+  --btn-border: #ddd;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.screen {
+  width: 375px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.date {
+  color: var(--accent);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.norm {
+  display: inline-block;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.percent {
+  font-weight: bold;
+}
+
+.meals {
+  margin-top: 30px;
+}
+
+.meal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.meal-btn {
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+.icons {
+  font-size: 25px;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 18px 0;
+  margin-top: 50px;
+  font-size: 18px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 14px;
+}
