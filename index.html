@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=375">
-    <title>Food Tracker</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Food Tracker</title>
+<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="top">
-    <img src="avatar.png" alt="avatar" class="avatar">
+<header class="header">
+  <img src="avatar.png" class="avatar" />
 </header>
 
-<h2 class="date">21 марта, пятница</h2>
+<h2 class="date-title">21 марта, пятница</h2>
 
-<div class="norm-box">
-    <span class="norm-number">0%</span> вашей нормы
+<div class="norm-block">
+  <span class="norm-text"><span class="norm-number">0%</span> вашей нормы</span>
 </div>
 
-<section class="meals">
+<div class="meals">
+  <div class="meal-item">
+    <span class="meal-name">Завтрак</span>
+    <span class="meal-emojis">🍉 🍋 🍎</span>
+  </div>
 
-    <div class="meal">
-        <div class="meal-title">Завтрак</div>
-        <div class="meal-emojis">🍉 🍋 🍎</div>
-    </div>
+  <div class="meal-item">
+    <span class="meal-name">Обед</span>
+    <span class="meal-emojis">🍉 🍋 🍎</span>
+  </div>
 
-    <div class="meal">
-        <div class="meal-title">Обед</div>
-        <div class="meal-emojis">🍉 🍋 🍎</div>
-    </div>
+  <div class="meal-item">
+    <span class="meal-name">Ужин</span>
+    <span class="meal-emojis">🍉 🍋 🍎</span>
+  </div>
 
-    <div class="meal">
-        <div class="meal-title">Ужин</div>
-        <div class="meal-emojis">🍉 🍋 🍎</div>
-    </div>
-
-    <div class="meal">
-        <div class="meal-title">+ Ещё</div>
-        <div class="meal-emojis">🍉 🍋 🍎</div>
-    </div>
-
-</section>
+  <div class="meal-item">
+    <span class="meal-name">+ Ещё</span>
+    <span class="meal-emojis">🍉 🍋 🍎</span>
+  </div>
+</div>
 
 <button class="add-meal">Добавить прием пищи</button>
 
