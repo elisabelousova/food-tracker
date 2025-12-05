@@ -2,35 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Трекер питания</title>
+    <meta name="viewport" content="width=375">
+    <title>Food Tracker</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Proxima Nova (замена через CDN) -->
-    <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
-
-    <!-- Galindo (для смайликов) -->
-    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="header">
-    <img src="assets/avatar.jpg" alt="Профиль" class="avatar">
+<header class="top">
+    <img src="avatar.png" alt="avatar" class="avatar">
 </header>
 
-<main class="main-content">
+<h2 class="date">21 марта, пятница</h2>
 
-    <!-- Дата -->
-    <h1 class="date">21 марта, пятница</h1>
+<div class="norm-box">
+    <span class="norm-number">0%</span> вашей нормы
+</div>
 
-    <!-- Процент нормы -->
-    <div class="norma-box">
-        <span class="percent underline">0%</span>
-        <span> вашей нормы</span>
-    </div>
-
-    <!-- Блоки приёмов пищи -->
 <section class="meals">
 
     <div class="meal">
@@ -55,10 +42,7 @@
 
 </section>
 
-    <!-- Кнопка добавления -->
-    <button class="add-btn">Добавить приём пищи</button>
-
-</main>
+<button class="add-meal">Добавить прием пищи</button>
 
 </body>
 </html>

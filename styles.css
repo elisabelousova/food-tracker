@@ -1,76 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --orange: #F2763D;
     --gray-bg: #F5F5F5;
-    --text-dark: #000;
-    --border-light: rgba(0, 0, 0, 0.08);
+    --border-light: rgba(0,0,0,0.08);
     --radius: 12px;
-
-    --font-main: 'Proxima Nova', sans-serif;
-    --font-emoji: 'Galindo', sans-serif;
+    --font-main: "Proxima Nova", sans-serif;
+    --font-emoji: "Galindo", sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: white;
+    width: 375px;
+    margin: 0 auto;
     font-family: var(--font-main);
+    background: white;
 }
 
-/* Header */
-
-.header {
-    width: 100%;
+.top {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 12px 16px;
 }
 
 .avatar {
     width: 64px;
     height: 64px;
-    border-radius: 50%;
     border: 2px solid var(--orange);
-    object-fit: cover;
+    border-radius: 50%;
 }
-
-/* Main */
-
-.main-content {
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Date */
 
 .date {
+    margin-top: 40px;
     text-align: center;
+    color: var(--orange);
     font-size: 18px;
     font-weight: 700;
-    color: var(--orange);
-    margin-top: 10px;
 }
 
-/* Norma box */
-
-.norma-box {
+.norm-box {
+    margin: 20px auto;
+    padding: 8px 16px;
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
-    padding: 10px 20px;
     width: max-content;
-    margin: 20px auto;
     font-size: 16px;
-    display: flex;
-    gap: 4px;
 }
 
-.underline {
+.norm-number {
     text-decoration: underline;
+    font-weight: 700;
 }
-
-/* Meals Section */
 
 .meals {
     margin-top: 20px;
@@ -81,7 +64,7 @@ body {
 
 .meal {
     display: flex;
-    justify-content: space-between; /* ВАЖНО: текст слева, смайлы справа */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -91,9 +74,6 @@ body {
     border-radius: var(--radius);
     padding: 10px 20px;
     font-size: 16px;
-    font-weight: 400;
-    min-width: 120px;
-    text-align: center;
 }
 
 .meal-emojis {
@@ -102,18 +82,15 @@ body {
     line-height: 20px;
 }
 
-
-/* Add button */
-
-.add-btn {
-    width: 100%;
+.add-meal {
+    display: block;
+    width: 303px;
+    margin: 40px auto;
+    padding: 16px;
     background: var(--orange);
     color: white;
-    border: none;
-    padding: 16px 0;
-    margin: 40px 0;
-    border-radius: var(--radius);
     font-size: 16px;
+    border: none;
+    border-radius: var(--radius);
     cursor: pointer;
-    font-weight: 400;
 }
