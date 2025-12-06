@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Food Tracker</title>
+<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <img src="avatar.png" class="avatar" />
+</header>
+
+<h2 class="date-title">21 марта, пятница</h2>
+
+<div class="norm-block">
+  <span class="norm-text"><span class="norm-number">0%</span> вашей нормы</span>
+</div>
+
+<div class="meals" id="meals-list">
+  <div class="meal-item"><span class="meal-name">Завтрак</span><span class="meal-emojis">🍉 🍋 🍎</span></div>
+  <div class="meal-item"><span class="meal-name">Обед</span><span class="meal-emojis">🍉 🍋 🍎</span></div>
+  <div class="meal-item"><span class="meal-name">Ужин</span><span class="meal-emojis">🍉 🍋 🍎</span></div>
+  <div class="meal-item"><span class="meal-name">+ Ещё</span><span class="meal-emojis">🍉 🍋 🍎</span></div>
+</div>
+
+<button class="add-meal">Добавить прием пищи</button>
+
+<div id="modal-overlay" class="modal-overlay hidden">
+  <div class="modal">
+    <h3 class="modal-title">Прием пищи</h3>
+
+    <div class="meal-type-row">
+      <button class="meal-type active" data-type="Завтрак">Завтрак</button>
+      <button class="meal-type" data-type="Обед">Обед</button>
+      <button class="meal-type" data-type="Ужин">Ужин</button>
+      <button class="meal-type" data-type="+ Ещё">+ Ещё</button>
+    </div>
+
+    <input id="food-input" class="food-input" placeholder="Введите блюдо" />
+
+    <div class="macros-row">
+      <div class="macro-box"><label>Ккал</label><span id="cal">0</span></div>
+      <div class="macro-box"><label>Б</label><span id="protein">0</span></div>
+      <div class="macro-box"><label>Ж</label><span id="fat">0</span></div>
+      <div class="macro-box"><label>У</label><span id="carbs">0</span></div>
+    </div>
+
+    <button id="add-food-btn" class="modal-add-btn">Добавить прием пищи</button>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
