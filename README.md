@@ -1,2 +1,15 @@
 # food-tracker
-Food tracker — HSE Web Programming 2025
+NutriHack — мобильная вёрстка дневника питания
+Этот проект — мобильная вёрстка главного экрана.
+Экран содержит дату, статус выполнения нормы по калориям, блоки приёмов пищи и кнопку добавления.
+
+Макет Figma: https://www.figma.com/design/S9TPe5ATrjnax3sP7Wwxfx/UCD?node-id=114-662&m=dev
+Деплой: https://elisabelousova.github.io/food-tracker/
+
+Использованные технологии:
+- HTML5 семантическая разметка
+- CSS3
+- Flexbox
+- CSS-переменные
+- Классы по смысловому названию
+- Фиксированная ширина под мобильный макет (375px)
