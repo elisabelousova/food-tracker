@@ -1,4 +1,4 @@
-const API_KEY = "xRT+rEwv58sPvc/rpjviTA==TxBGup8so2O3****";
+const API_KEY = "xRT+rEwv58sPvc/rpjviTA==TxBGup8so2O3QSQ1";
 
 const addMealBtn = document.querySelector(".add-meal");
 const overlay = document.querySelector("#modal-overlay");
