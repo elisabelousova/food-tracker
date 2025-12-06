@@ -4,7 +4,7 @@ let meals = [
   { name: "Завтрак", kcal: 0, B: 0, J: 0, U: 0 },
   { name: "Обед", kcal: 0, B: 0, J: 0, U: 0 },
   { name: "Ужин", kcal: 0, B: 0, J: 0, U: 0 },
-  { name: "+ Ещё", kcal: 0, B: 0, J: 0, U: 0 }
+  { name: "Другое", kcal: 0, B: 0, J: 0, U: 0 }
 ];
 
 const list = document.getElementById("meals-list");
@@ -28,8 +28,8 @@ document.querySelectorAll(".meal-type").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".meal-type").forEach(b => b.classList.remove("selected"));
     btn.classList.add("selected");
-    selectedMeal = btn.dataset.type;
 
+    selectedMeal = btn.dataset.type;
     selectedIndex = meals.findIndex(m => m.name === selectedMeal);
   });
 });
