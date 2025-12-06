@@ -1,61 +1,78 @@
-const API_KEY = "xRT+rEwv58sPvc/rpjviTA==TxBGup8so2O3QSQ1";
+import { getNutrition } from "./api.js";
 
-const addMealBtn = document.querySelector(".add-meal");
-const overlay = document.querySelector("#modal-overlay");
-const foodInput = document.querySelector("#food-input");
+let meals = [
+  { name: "Завтрак", kcal: 0, B: 0, J: 0, U: 0 },
+  { name: "Обед", kcal: 0, B: 0, J: 0, U: 0 },
+  { name: "Ужин", kcal: 0, B: 0, J: 0, U: 0 },
+  { name: "+ Ещё", kcal: 0, B: 0, J: 0, U: 0 }
+];
 
-const kcalEl = document.querySelector("#cal");
-const proteinEl = document.querySelector("#protein");
-const fatEl = document.querySelector("#fat");
-const carbsEl = document.querySelector("#carbs");
+const list = document.getElementById("meals-list");
+const addBtn = document.getElementById("add-meal-btn");
 
-const mealButtons = document.querySelectorAll(".meal-type");
+const modal = document.getElementById("modal-overlay");
+const dishInput = document.getElementById("dish-input");
+const saveBtn = document.getElementById("save-dish-btn");
+
+const pCal = document.getElementById("p-cal");
+const pProtein = document.getElementById("p-protein");
+const pFat = document.getElementById("p-fat");
+const pCarb = document.getElementById("p-carb");
+
 let selectedMeal = "Завтрак";
+let selectedIndex = 0;
 
-mealButtons.forEach(btn =>
+renderMeals();
+
+document.querySelectorAll(".meal-type").forEach(btn => {
   btn.addEventListener("click", () => {
-    mealButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+    document.querySelectorAll(".meal-type").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
     selectedMeal = btn.dataset.type;
-  })
-);
 
-addMealBtn.addEventListener("click", () => overlay.classList.remove("hidden"));
-
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) overlay.classList.add("hidden");
-});
-
-foodInput.addEventListener("input", async () => {
-  const q = foodInput.value.trim();
-  if (!q) return;
-
-  const res = await fetch(
-    `https://api.calorieninjas.com/v1/nutrition?query=${q}`,
-    { headers: { "X-Api-Key": API_KEY } }
-  );
-
-  const data = await res.json();
-
-  if (data.items?.length > 0) {
-    const item = data.items[0];
-
-    kcalEl.textContent = item.calories;
-    proteinEl.textContent = item.protein_g;
-    fatEl.textContent = item.fat_total_g;
-    carbsEl.textContent = item.carbohydrates_total_g;
-  }
-});
-
-document.querySelector("#add-food-btn").addEventListener("click", () => {
-  const mealListItems = document.querySelectorAll(".meal-item");
-
-  mealListItems.forEach(item => {
-    if (item.querySelector(".meal-name").textContent === selectedMeal) {
-      item.querySelector(".meal-emojis").innerHTML =
-        `${kcalEl.textContent} / ${proteinEl.textContent} / ${fatEl.textContent} / ${carbsEl.textContent}`;
-    }
+    selectedIndex = meals.findIndex(m => m.name === selectedMeal);
   });
-
-  overlay.classList.add("hidden");
 });
+
+dishInput.addEventListener("input", async () => {
+  const text = dishInput.value.trim();
+  if (text.length < 2) return;
+
+  const result = await getNutrition(text);
+  if (!result) return;
+
+  pCal.textContent = result.calories;
+  pProtein.textContent = result.protein;
+  pFat.textContent = result.fat;
+  pCarb.textContent = result.carbs;
+});
+
+addBtn.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+});
+
+saveBtn.addEventListener("click", () => {
+  meals[selectedIndex].kcal = Number(pCal.textContent);
+  meals[selectedIndex].B = Number(pProtein.textContent);
+  meals[selectedIndex].J = Number(pFat.textContent);
+  meals[selectedIndex].U = Number(pCarb.textContent);
+
+  renderMeals();
+  modal.classList.add("hidden");
+});
+
+function renderMeals() {
+  list.innerHTML = "";
+
+  meals.forEach(m => {
+    const div = document.createElement("div");
+    div.className = "meal-item";
+
+    div.innerHTML = `
+      <span class="meal-name">${m.name}</span>
+      <span class="meal-values">${m.kcal} | ${m.B} | ${m.J} | ${m.U}</span>
+    `;
+
+    list.appendChild(div);
+  });
+}
