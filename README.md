@@ -3,6 +3,7 @@ NutriHack — дневник питания, позволящий отслежи
 Экран содержит дату, статус выполнения нормы по калориям, блоки приёмов пищи и кнопку добавления.
 
 Макет Figma: https://www.figma.com/design/S9TPe5ATrjnax3sP7Wwxfx/UCD?node-id=114-662&m=dev
+
 Деплой: https://elisabelousova.github.io/food-tracker/
 
 Использованные технологии:
