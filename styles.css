@@ -6,6 +6,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -66,13 +69,14 @@ body {
   color: #000;
 }
 
-.meal-emojis {
-  font-family: 'Galindo', cursive;
-  font-size: 25px;
-  line-height: 20px;
+.meal-values {
   position: absolute;
   left: 50%;
-  transform: translateX(-20%);
+  transform: translateX(-10%);
+  display: flex;
+  gap: 4px;
+  font-family: 'Proxima Nova';
+  font-size: 15px;
 }
 
 .add-meal {
@@ -83,85 +87,5 @@ body {
   color: white;
   border: none;
   border-radius: 12px;
-  font-size: 16px;
-}
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.hidden { display: none; }
-
-.modal {
-  width: 100%;
-  max-width: 375px;
-  background: white;
-  padding: 24px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.modal-title {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: #F2763D;
-  margin-bottom: 20px;
-}
-
-.meal-type-row {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.meal-type {
-  flex: 1;
-  padding: 8px 0;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
-}
-
-.meal-type.active {
-  background: rgba(242,118,61,0.33);
-  border: none;
-}
-
-.food-input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.macros-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.macro-box {
-  width: 60px;
-  padding: 12px;
-  border-radius: 12px;
-  background: #F5F5F5;
-  text-align: center;
-}
-
-.modal-add-btn {
-  width: 100%;
-  padding: 16px 0;
-  border-radius: 12px;
-  background: #F2763D;
-  color: white;
-  border: none;
   font-size: 16px;
 }
