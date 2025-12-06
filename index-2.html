@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Tracker</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section id="app">
+    <div class="header">
+      <h2 class="date">21 марта, пятница</h2>
+
+      <img class="avatar" src="img/avatar.png" alt="аватар" />
+    </div>
+
+    <div class="norma">
+      <span class="percent underline">0%</span> вашей нормы
+    </div>
+
+    <div class="list" id="meals-list"></div>
+
+    <button id="add-button" class="add-btn">Добавить прием пищи</button>
+  </section>
+
+  <!-- Модалка -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Добавить прием пищи</h3>
+
+      <label>Название</label>
+      <input id="meal-name" type="text" placeholder="Например: Перекус" />
+
+      <label>Иконки (эмодзи)</label>
+      <input id="meal-icons" type="text" placeholder="🍉 🍋 🍎" />
+
+      <button id="save-meal" class="save-btn">Добавить</button>
+      <button id="cancel" class="cancel-btn">Отмена</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
