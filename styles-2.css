@@ -1,0 +1,123 @@
+:root {
+  --orange: #F2763D;
+  --gray-border: rgba(0, 0, 0, 0.08);
+  --font-main: "Proxima Nova", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 375px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  color: var(--orange);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.norma {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border: 1px solid var(--gray-border);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.underline {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.meal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--gray-border);
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.add-btn {
+  width: 100%;
+  background: var(--orange);
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 16px;
+  border: none;
+  margin-top: 30px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-border);
+}
+
+.save-btn {
+  background: var(--orange);
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+}
+
+.cancel-btn {
+  border: none;
+  background: #ddd;
+  padding: 10px;
+  border-radius: 12px;
+}
