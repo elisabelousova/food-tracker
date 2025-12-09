@@ -75,7 +75,6 @@ saveBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
 
-// отрисовка строк
 function renderMeals() {
   list.innerHTML = "";
 
@@ -83,26 +82,38 @@ function renderMeals() {
     const div = document.createElement("div");
     div.className = "meal-item";
 
-    const empty = m.kcal === 0 && m.B === 0 && m.J === 0 && m.U === 0;
+    const isEmpty = m.kcal === 0 && m.B === 0 && m.J === 0 && m.U === 0;
 
-    div.innerHTML = empty
-      ? `
+    let content = "";
+
+    if (isEmpty) {
+      content = `
         <span class="meal-name">${m.name}</span>
         <span class="meal-emojis">🍉 🍋 🍎</span>
-      `
-      : `
+      `;
+    } else {
+      content = `
         <span class="meal-name">${m.name}</span>
 
         <div class="meal-table">
-          <div class="meal-header">
-            <span>Ккал</span><span>Б</span><span>Ж</span><span>У</span>
+          <div class="meal-table-header">
+            <span>Ккал</span>
+            <span>Б</span>
+            <span>Ж</span>
+            <span>У</span>
           </div>
+
           <div class="meal-values-row">
-            <span>${m.kcal}</span><span>${m.B}</span><span>${m.J}</span><span>${m.U}</span>
+            <span>${m.kcal}</span>
+            <span>${m.B}</span>
+            <span>${m.J}</span>
+            <span>${m.U}</span>
           </div>
         </div>
       `;
+    }
 
+    div.innerHTML = content;
     list.appendChild(div);
   });
 }
