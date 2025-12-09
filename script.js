@@ -75,7 +75,6 @@ saveBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
 
-// отрисовка строк
 function renderMeals() {
   list.innerHTML = "";
 
