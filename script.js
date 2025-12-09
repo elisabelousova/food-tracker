@@ -23,6 +23,7 @@ let selectedMeal = "Завтрак";
 let selectedIndex = 0;
 
 renderMeals();
+updateNorm();
 
 document.querySelectorAll(".meal-type").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -33,6 +34,12 @@ document.querySelectorAll(".meal-type").forEach(btn => {
     selectedIndex = meals.findIndex(m => m.name === selectedMeal);
   });
 });
+
+function updateNorm() {
+  const totalKcal = meals.reduce((sum, m) => sum + m.kcal, 0);
+  const percent = Math.round((totalKcal / 2000) * 100);
+  document.getElementById("norm-number").textContent = percent + "%";
+}
 
 dishInput.addEventListener("input", async () => {
   const text = dishInput.value.trim();
@@ -58,6 +65,8 @@ saveBtn.addEventListener("click", () => {
   meals[selectedIndex].U = Number(pCarb.textContent);
 
   renderMeals();
+  updateNorm();   
+
   modal.classList.add("hidden");
 });
 
@@ -79,7 +88,6 @@ function renderMeals() {
         <span class="meal-emojis">🍉 🍋 🍎</span>
       `;
     } else {
-      // Если есть данные — вывести таблицу Ккал / Б / Ж / У
       content = `
         <span class="meal-name">${m.name}</span>
 
