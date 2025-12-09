@@ -89,3 +89,26 @@ body {
   border-radius: 12px;
   font-size: 16px;
 }
+
+.meal-emojis {
+  font-family: 'Galindo';
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+}
+
+.meal-table {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meal-header, .meal-values-row {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  justify-items: center;
+  font-size: 12px;
+}
+
