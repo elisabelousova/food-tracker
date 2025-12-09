@@ -1,14 +1,14 @@
 body {
   font-family: 'Proxima Nova', sans-serif;
   background: #FFFFFF;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 375px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 375px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative; 
 }
 
 .header {
