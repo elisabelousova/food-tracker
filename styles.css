@@ -69,7 +69,6 @@ body {
   color: #000;
 }
 
-/* Смайлы по умолчанию */
 .meal-emojis {
   font-family: 'Galindo';
   font-size: 24px;
@@ -87,7 +86,7 @@ body {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  width: 120px; /* фиксированная ширина, чтобы ничего не прыгало */
+  width: 120px; 
 }
 
 .meal-header {
@@ -116,4 +115,29 @@ body {
   border: none;
   border-radius: 12px;
   font-size: 16px;
+}
+
+.meal-table {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meal-table-header,
+.meal-values-row {
+  display: grid;
+  grid-template-columns: repeat(4, 32px);
+  justify-items: center;
+  font-size: 11px;
+  line-height: 1;
+  color: #555;
+}
+
+.meal-values-row span {
+  font-weight: 600;
+  color: #000;
 }
