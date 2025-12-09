@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Food Tracker</title>
-<link rel="stylesheet" href="styles.css" />
-<link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Tracker</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="modal.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header class="header">
@@ -16,32 +19,39 @@
 <h2 class="date-title">21 марта, пятница</h2>
 
 <div class="norm-block">
-  <span class="norm-text"><span class="norm-number">0%</span> вашей нормы</span>
+  <span class="norm-text"><span id="norm-number" class="norm-number">0%</span> вашей нормы</span>
 </div>
 
-<div class="meals">
-  <div class="meal-item">
-    <span class="meal-name">Завтрак</span>
-    <span class="meal-emojis">🍉 🍋 🍎</span>
-  </div>
+<div id="meals-list" class="meals"></div>
 
-  <div class="meal-item">
-    <span class="meal-name">Обед</span>
-    <span class="meal-emojis">🍉 🍋 🍎</span>
-  </div>
+<button id="add-meal-btn" class="add-meal">Добавить прием пищи</button>
 
-  <div class="meal-item">
-    <span class="meal-name">Ужин</span>
-    <span class="meal-emojis">🍉 🍋 🍎</span>
-  </div>
+<!-- Модалка добавления блюда -->
+<div id="modal-overlay" class="modal-overlay hidden">
+  <div class="modal">
+    <h3 class="modal-title">Прием пищи</h3>
 
-  <div class="meal-item">
-    <span class="meal-name">+ Ещё</span>
-    <span class="meal-emojis">🍉 🍋 🍎</span>
+    <div class="meal-type-selector" id="meal-type-selector">
+      <button data-type="Завтрак" class="meal-type selected">Завтрак</button>
+      <button data-type="Обед" class="meal-type">Обед</button>
+      <button data-type="Ужин" class="meal-type">Ужин</button>
+      <button data-type="Другое" class="meal-type">+ Еще</button>
+    </div>
+
+    <input id="dish-input" class="input" placeholder="Введите блюдо">
+
+    <div class="pills">
+      <div class="pill"><span>Ккал</span><span id="p-cal">0</span></div>
+      <div class="pill"><span>Б</span><span id="p-protein">0</span></div>
+      <div class="pill"><span>Ж</span><span id="p-fat">0</span></div>
+      <div class="pill"><span>У</span><span id="p-carb">0</span></div>
+    </div>
+
+    <button id="save-dish-btn" class="save-btn">Добавить прием пищи</button>
+    <div class="modal-line"></div>
   </div>
 </div>
 
-<button class="add-meal">Добавить прием пищи</button>
-
+<script type="module" src="script.js"></script>
 </body>
 </html>
