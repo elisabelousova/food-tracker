@@ -69,6 +69,7 @@ body {
   color: #000;
 }
 
+/* Смайлы по умолчанию */
 .meal-emojis {
   font-family: 'Galindo';
   font-size: 24px;
@@ -86,7 +87,7 @@ body {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  width: 120px; 
+  width: 120px; /* фиксированная ширина, чтобы ничего не прыгало */
 }
 
 .meal-header {
