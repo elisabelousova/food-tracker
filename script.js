@@ -23,7 +23,9 @@ let selectedMeal = "Завтрак";
 let selectedIndex = 0;
 
 renderMeals();
+updateNorm();
 
+// выбор приема пищи
 document.querySelectorAll(".meal-type").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".meal-type").forEach(b => b.classList.remove("selected"));
@@ -34,6 +36,14 @@ document.querySelectorAll(".meal-type").forEach(btn => {
   });
 });
 
+// расчет нормы (из 2000 ккал)
+function updateNorm() {
+  const totalKcal = meals.reduce((sum, m) => sum + m.kcal, 0);
+  const percent = Math.round((totalKcal / 2000) * 100);
+  document.getElementById("norm-number").textContent = percent + "%";
+}
+
+// ввод блюда → запрос в API
 dishInput.addEventListener("input", async () => {
   const text = dishInput.value.trim();
   if (text.length < 2) return;
@@ -47,10 +57,12 @@ dishInput.addEventListener("input", async () => {
   pCarb.textContent = result.carbs;
 });
 
+// открыть модалку
 addBtn.addEventListener("click", () => {
   modal.classList.remove("hidden");
 });
 
+// сохранить блюдо
 saveBtn.addEventListener("click", () => {
   meals[selectedIndex].kcal = Number(pCal.textContent);
   meals[selectedIndex].B = Number(pProtein.textContent);
@@ -58,9 +70,12 @@ saveBtn.addEventListener("click", () => {
   meals[selectedIndex].U = Number(pCarb.textContent);
 
   renderMeals();
+  updateNorm();
+
   modal.classList.add("hidden");
 });
 
+// отрисовка строк
 function renderMeals() {
   list.innerHTML = "";
 
@@ -68,19 +83,14 @@ function renderMeals() {
     const div = document.createElement("div");
     div.className = "meal-item";
 
-    let content = "";
+    const empty = m.kcal === 0 && m.B === 0 && m.J === 0 && m.U === 0;
 
-    const isEmpty = m.kcal === 0 && m.B === 0 && m.J === 0 && m.U === 0;
-
-    if (isEmpty) {
-      // Если пусто — показать смайлы
-      content = `
+    div.innerHTML = empty
+      ? `
         <span class="meal-name">${m.name}</span>
         <span class="meal-emojis">🍉 🍋 🍎</span>
-      `;
-    } else {
-      // Если есть данные — вывести таблицу Ккал / Б / Ж / У
-      content = `
+      `
+      : `
         <span class="meal-name">${m.name}</span>
 
         <div class="meal-table">
@@ -92,9 +102,7 @@ function renderMeals() {
           </div>
         </div>
       `;
-    }
 
-    div.innerHTML = content;
     list.appendChild(div);
   });
 }
