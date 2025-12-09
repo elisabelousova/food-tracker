@@ -91,30 +91,3 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
-/* Таблица БЖУ в строке приёма пищи */
-.meal-table {
-  position: absolute;
-  right: 16px;
-  top: 6px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.meal-table-header,
-.meal-values-row {
-  display: grid;
-  grid-template-columns: repeat(4, 32px);
-  justify-items: center;
-  font-size: 11px;
-  line-height: 1;
-  color: #555;
-}
-
-.meal-values-row span {
-  font-weight: 600;
-  color: #000;
-}
-
